@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'docker build -t tuna17/auth-server'
+        sh 'npm start'
       }
     }
   }
