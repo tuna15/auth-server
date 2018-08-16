@@ -1,7 +1,8 @@
 pipeline {
   agent {
-    dockerfile {
-      filename 'dockerfile'
+    docker {
+      image 'tuna17/auth-server'
+      args '-p 3000:3000'
     }
 
   }
