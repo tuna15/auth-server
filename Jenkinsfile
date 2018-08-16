@@ -1,15 +1,14 @@
 pipeline {
   agent {
-    docker {
-      args '-p 3000:3000'
-      image 'node:8'
+    dockerfile {
+      filename 'dockerfile'
     }
 
   }
   stages {
     stage('build') {
       steps {
-        sh 'npm install'
+        sh 'docker build -t tuna17/auth-server'
       }
     }
   }
